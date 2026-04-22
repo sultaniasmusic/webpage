@@ -507,4 +507,56 @@ grid-template-columns: 1fr;
     gap: 25px;
   }
 }
+/* ========================= */
+/* HAMBURGER MENU */
+/* ========================= */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: #3a1f1f;
+  transition: 0.3s;
+}
+
+/* ========================= */
+/* MOBILE NAV */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  /* Show hamburger */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hide nav initially */
+  nav {
+    position: absolute;
+    top: 90px;
+    right: 0;
+    background: #f4efec;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 40px 0;
+    display: none;
+    border-top: 1px solid #ddd;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    font-size: 20px;
+  }
+}
 

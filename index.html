@@ -13,10 +13,16 @@
 </head>
 
 <body>
-
+    
 <header class="header">
-  <!-- <div class="logo">Sultanias Music</div> -->
-   <img src="images/logo.png">
+   <img src="images/logo.png" alt="Sultanias Music">
+
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
   <nav>
     <a href="#">Home</a>
     <a href="#about">O mne</a>
@@ -260,13 +266,13 @@
     <div class="kontakt-form">
       <h3>Nezávazný dopyt - Sultanias Music</h3>
 
-      <form>
-        <input type="text" placeholder="Meno *" required>
-        <input type="text" placeholder="Priezvisko *" required>
-        <input type="email" placeholder="Emailová adresa" required>
-        <input type="text" placeholder="Typ podujatia">
-        <input type="date">
-        <textarea placeholder="Povedzte mi viac..."></textarea>
+      <form id="reservation-form">
+        <input type="text" name="first_name" placeholder="Meno *" required>
+        <input type="text" name="last_name" placeholder="Priezvisko *" required>
+        <input type="email" name="email" placeholder="Emailová adresa" required>
+        <input type="text" name="event_type" placeholder="Typ podujatia">
+        <input type="date" name="event_date">
+        <textarea name="message" placeholder="Povedzte mi viac..."></textarea>
         <button type="submit">Odoslať dopyt</button>
       </form>
     </div>
@@ -302,8 +308,8 @@
         <img src="images/tiktok.svg" alt="TikTok">
       </a>
 
-      <a href="#" aria-label="LinkedIn">
-        <img src="images/linkedin.svg" alt="LinkedIn">
+      <a href="#" aria-label="Whatsapp">
+        <img src="images/whatsapp.svg" alt="LinkedIn">
       </a>
     </div>
 
@@ -315,6 +321,8 @@
   </div>
 
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="email.js"></script>
 
 </body>
 </html>
