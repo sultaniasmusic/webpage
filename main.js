@@ -89,9 +89,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  /* ========================= */
-  /* VIDEO THUMB LIGHTBOX */
-  /* ========================= */
+  // /* ========================= */
+  // /* VIDEO THUMB LIGHTBOX */
+  // /* ========================= */
 
   // const thumbs = document.querySelectorAll(".video-thumb");
 
@@ -99,92 +99,73 @@ document.addEventListener("DOMContentLoaded", function () {
   //   t.addEventListener("click", () => {
 
   //     const id = t.dataset.video;
-  //     if (!id) return;
 
   //     const box = document.createElement("div");
-
   //     box.style = `
-  //       position: fixed;
-  //       top: 0; left: 0;
-  //       width: 100%; height: 100%;
-  //       background: rgba(0,0,0,0.92);
-  //       display: flex;
-  //       align-items: center;
-  //       justify-content: center;
-  //       z-index: 9999;
+  //       position:fixed;
+  //       top:0;left:0;
+  //       width:100%;height:100%;
+  //       background:rgba(0,0,0,0.9);
+  //       display:flex;
+  //       align-items:center;
+  //       justify-content:center;
+  //       z-index:9999;
   //     `;
 
   //     box.innerHTML = `
   //       <iframe
   //         width="80%"
   //         height="80%"
-  //         src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1"
+  //         src="https://www.youtube.com/embed/${id}"
   //         frameborder="0"
-  //         allow="autoplay; encrypted-media; picture-in-picture"
   //         allowfullscreen>
   //       </iframe>
   //     `;
 
   //     document.body.appendChild(box);
 
-  //     /* Prevent closing when clicking video */
-  //     const iframe = box.querySelector("iframe");
-  //     iframe.addEventListener("click", (e) => {
-  //       e.stopPropagation();
-  //     });
-
-  //     /* Close on background click */
-  //     box.addEventListener("click", () => {
+  //     setTimeout(() => {
+  //       // fallback → youtube'a gönder
+  //       window.open(`https://www.youtube.com/watch?v=${id}`, "_blank");
   //       box.remove();
-  //     });
-
-  //     /* Close on ESC */
-  //     document.addEventListener("keydown", function escHandler(e) {
-  //       if (e.key === "Escape") {
-  //         box.remove();
-  //         document.removeEventListener("keydown", escHandler);
-  //       }
-  //     });
+  //     }, 2000);
 
   //   });
   // });
-const thumbs = document.querySelectorAll(".video-thumb");
 
-thumbs.forEach(t => {
-  t.addEventListener("click", () => {
+  const thumbs = document.querySelectorAll(".video-thumb");
 
-    const id = t.dataset.video;
+  thumbs.forEach(t => {
+    t.addEventListener("click", () => {
 
-    const box = document.createElement("div");
-    box.style = `
-      position:fixed;
-      top:0;left:0;
-      width:100%;height:100%;
-      background:rgba(0,0,0,0.9);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      z-index:9999;
-    `;
+      const id = t.dataset.video;
 
-    box.innerHTML = `
-      <iframe
-        width="80%"
-        height="80%"
-        src="https://www.youtube.com/embed/${id}"
-        frameborder="0"
-        allowfullscreen>
-      </iframe>
-    `;
+      const box = document.createElement("div");
+      box.style.cssText = `
+        position:fixed;
+        inset:0;
+        background:rgba(0,0,0,0.9);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        z-index:9999;
+      `;
 
-    document.body.appendChild(box);
+      box.innerHTML = `
+        <iframe
+          width="80%"
+          height="80%"
+          src="https://www.youtube.com/embed/${id}?autoplay=1&playsinline=1"
+          frameborder="0"
+          allow="autoplay; fullscreen"
+          allowfullscreen>
+        </iframe>
+      `;
 
-    setTimeout(() => {
-      // fallback → youtube'a gönder
-      window.open(`https://www.youtube.com/watch?v=${id}`, "_blank");
-      box.remove();
-    }, 2000);
+      // Tıklayınca kapansın
+      box.addEventListener("click", () => box.remove());
 
+      document.body.appendChild(box);
+    });
   });
-});
 });
