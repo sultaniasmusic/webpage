@@ -101,7 +101,7 @@ nav a:hover::after {
 }
 
 .hero img {
-  width: 95%;
+  width: 40%;
   margin: 50px 0;
   border-radius: 10px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -383,6 +383,7 @@ button {
     transform: translateY(0);
   }
 }
+
 /* ========================= */
 /* FOOTER – FINAL ICON FIX */
 /* ========================= */
@@ -403,7 +404,8 @@ button {
 
 /* LOGO */
 .footer-left img {
-  height: 55px;              /* ⬅️ küçültüldü */
+  height: 55px;
+  /* ⬅️ küçültüldü */
   width: auto;
   object-fit: contain;
 }
@@ -417,7 +419,8 @@ button {
 
 /* KRİTİK KISIM */
 .footer-right img {
-  width: 26px;               /* ⬅️ ikon boyutu sabitlendi */
+  width: 26px;
+  /* ⬅️ ikon boyutu sabitlendi */
   height: 26px;
   max-width: 26px;
   max-height: 26px;
@@ -460,13 +463,16 @@ button {
     height: 24px;
   }
 }
+
 /* ========================= */
 /* ABOUT – CENTER ALIGN FIX */
 /* ========================= */
 
 .about {
-  padding: 100px 0;          /* sola–sağa padding’i kaldırıyoruz */
-  display: block;            /* grid’i container’a devrediyoruz */
+  padding: 100px 0;
+  /* sola–sağa padding’i kaldırıyoruz */
+  display: block;
+  /* grid’i container’a devrediyoruz */
 }
 
 .about .container {
@@ -488,7 +494,8 @@ button {
   width: 100%;
   max-width: 520px;
   border-radius: 10px;
-  justify-self: center;      /* görseli ortalar */
+  justify-self: center;
+  /* görseli ortalar */
 }
 
 /* TEXT */
@@ -518,6 +525,7 @@ button {
     margin-top: 20px;
   }
 }
+
 /* ========================= */
 /* GALLERY PAGE – FIX */
 /* ========================= */
@@ -572,7 +580,7 @@ button {
 
 .gallery-grid img:hover {
   transform: scale(1.04);
-  box-shadow: 0 12px 30px rgba(0,0,0,.2);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .2);
 }
 
 /* ========================= */
@@ -613,7 +621,7 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-shadow: 0 6px 20px rgba(0,0,0,.6);
+  text-shadow: 0 6px 20px rgba(0, 0, 0, .6);
 }
 
 /* ========================= */
@@ -623,7 +631,7 @@ button {
 .lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,.9);
+  background: rgba(0, 0, 0, .9);
   display: none;
   align-items: center;
   justify-content: center;
@@ -674,6 +682,7 @@ button {
     grid-template-columns: 1fr;
   }
 }
+
 /* ========================= */
 /* VIDEO HOVER EFFECT */
 /* ========================= */
@@ -688,7 +697,7 @@ button {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   opacity: 0;
   transition: opacity 0.35s ease;
   z-index: 1;
@@ -718,6 +727,7 @@ button {
   transform: translate(-50%, -50%) scale(1.15);
   opacity: 1;
 }
+
 /* ========================= */
 /* HERO IMAGE HOVER */
 /* ========================= */
@@ -726,8 +736,9 @@ button {
 
 .hero img:hover {
   transform: scale(1.04);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
 }
+
 /* ========================= */
 /* GENERAL IMAGE HOVER */
 /* ========================= */
@@ -741,8 +752,9 @@ button {
 .services img:hover,
 .about img:hover {
   transform: scale(1.03);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
 }
+
 /* ========================= */
 /* SERVICES HOVER */
 /* ========================= */
@@ -753,8 +765,9 @@ button {
 
 .service:hover {
   transform: translateY(-6px);
-  box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
 }
+
 /* ========================= */
 /* ABOUT HOVER */
 /* ========================= */
@@ -765,8 +778,9 @@ button {
 
 .about img:hover {
   transform: scale(1.03);
-  box-shadow: 0 18px 35px rgba(0,0,0,0.18);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.18);
 }
+
 .about div {
   transition: transform 0.3s ease;
 }
@@ -774,6 +788,7 @@ button {
 .about:hover div {
   transform: translateY(-4px);
 }
+
 /* ========================= */
 /* BUTTON HOVER – GLOBAL */
 /* ========================= */
@@ -786,8 +801,9 @@ button {
 .btn:hover,
 button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 25px rgba(139,0,0,0.35);
+  box-shadow: 0 12px 25px rgba(139, 0, 0, 0.35);
 }
+
 /* ========================= */
 /* REPERTOAR HOVER */
 /* ========================= */
@@ -798,7 +814,7 @@ button:hover {
 
 .repertoar-box:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 30px rgba(0,0,0,0.12);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
 }
 
 /* ========================= */
@@ -887,7 +903,7 @@ button:hover {
   }
 
   /* Metin tarafı */
-  .spolupraca-hero > div {
+  .spolupraca-hero>div {
     padding: 0 !important;
   }
 
@@ -905,7 +921,8 @@ button:hover {
   .spolupraca-hero img {
     width: 100%;
     height: auto;
-    max-height: 220px;           /* ✅ foto küçülür */
+    max-height: 220px;
+    /* ✅ foto küçülür */
     border-radius: 10px;
     object-fit: cover;
   }
@@ -921,9 +938,15 @@ button:hover {
   section a.btn-outline {
     display: inline-block;
     margin-top: 20px;
-    align-self: flex-start;   /* ✅ metinle hizalı */
+    align-self: flex-start;
+    /* ✅ metinle hizalı */
     font-size: 15px;
     padding: 12px 18px;
+  }
+
+  .hero img {
+    width: 80%;
+
   }
 
 }
